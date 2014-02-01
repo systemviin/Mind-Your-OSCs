@@ -20,9 +20,9 @@ OSCPACK_OBJECTS = IpEndpointName.o NetworkingUtils.o UdpSocket.o \
 									OscOutboundPacketStream.o OscTypes.o 
 OSCPACK_OBJ := $(foreach OBJ, $(OSCPACK_OBJECTS), $(OSCPACK_OBJ_DIR)/$(OBJ)) -I$(OSCPACK_DIR)
 
-EMOTIV_INCLUDE_DIR 	= -I/usr/local/include/Emotiv -I./include
+EMOTIV_INCLUDE_DIR 	= -I/usr/local/include/Emotiv/edk_secure -I./include
 EMOTIV_LIB_DIR 			= -L/usr/local/lib
-EMOTIV_LIBS					= -ledk.1 -ledk_ultils_mac -liomp5
+EMOTIV_LIBS					= -ledk.1 -ledk_ultils_mac -lCustomerSecurity
 EMOTIV = $(EMOTIV_INCLUDE_DIR) $(EMOTIV_LIB_DIR) $(EMOTIV_LIBS)									
 
 BOOST_DIR 		= -I/opt/local/include

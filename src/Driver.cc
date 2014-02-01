@@ -12,8 +12,10 @@ Driver::~Driver(void)
 
 void Driver::start()
 {
-	boost::function<void(string)> connect = boost::bind(&Driver::connect_epoc, this, _1);
-	boost::function<void()> disconnect = boost::bind(&Driver::disconnect_epoc, this);
+	boost::function<void(string)> connect = 
+	  boost::bind(&Driver::connect_epoc, this, _1);
+	boost::function<void()> disconnect =   
+	  boost::bind(&Driver::disconnect_epoc, this);
 	
 	Fl::lock();
 	gui.run(connect, disconnect);

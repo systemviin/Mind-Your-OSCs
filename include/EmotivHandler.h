@@ -33,7 +33,7 @@ private:
 	int maxBatteryLevel;
 	static const int contactQualitySize = EE_CHAN_FP2+1;
 	EE_EEG_ContactQuality_t contactQuality[contactQualitySize];
-	static EE_DataChannel_t targetChannelList[22];
+	//static EE_DataChannel_t targetChannelList[22];
 
 	//Gyro
 	int gyroX, gyroY;

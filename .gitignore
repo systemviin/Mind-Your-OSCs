@@ -6,3 +6,7 @@ oscpack
 bin
 build
 test.txt
+._*
+.DS_Store
+.sconsign.dblite
+mpkg_maker_consumer.pmdoc/
